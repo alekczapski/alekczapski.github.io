@@ -34,13 +34,7 @@
   <link rel="stylesheet" href="https://alekczapski.github.io/css/bootstrap.min.css" />
 
   
-  
-  
-    
-      
-    
-  
-  <title>Posts | alekczapski</title>
+  <title>Wireshark - network traffic from cluster node | alekczapski</title>
   
 
   <style>
@@ -187,38 +181,13 @@ blockquote,
   
   <div class="container">
     <article>
-      
-
-  
-    
-  
-
-<h1>Posts</h1>
-
-
-
-  <p>
-    <a href="https://alekczapski.github.io/wireshark-network-traffic-from-cluster-node/">Wireshark - network traffic from cluster node</a>
-    
-    
-    <br>
-    <small class="text-secondary">Feb 14, 2020</small>
-    
-
-<small><code><a href="https://alekczapski.github.io/tags/wireshark">wireshark</a></code></small>
-
-
-<small><code><a href="https://alekczapski.github.io/tags/linux">linux</a></code></small>
-
-
-<small><code><a href="https://alekczapski.github.io/tags/windows">windows</a></code></small>
-
-
-<small><code><a href="https://alekczapski.github.io/tags/plink">plink</a></code></small>
-
-    
-  </p>
-
+      <h1>Wireshark - network traffic from cluster node</h1>
+<p>Because <code>tcpdump</code> can write raw packets to standard output (<strong>-w -</strong> option), and Wireshark can read from standard input (<strong>-i -</strong> option), we can use <code>ssh</code> or <code>plink.exe</code> and redirect <code>tcpdump</code> output on a remote machine to a local Wireshark. <code>plink.exe</code> is a command-line connection tool similar to UNIX ssh mostly used for automated operations.</p>
+<h2 id="linux-example">Linux example</h2>
+<pre><code>wireshark -k -i &lt; (ssh _NODE_ sudo tcpdump -nnqt -s 0 -i any -A &quot;portrange 5060-5099 or proto gre&quot; -U -w -)
+</code></pre><h2 id="windows-example">Windows example</h2>
+<pre><code>&quot;C:\Program Files\PuTTY\plink.exe&quot; -batch -ssh _NODE_ sudo tcpdump --immediate-mode -nnqt -s 0 -i any &quot;portrange 5060-5099 or proto gre&quot; -U -w - | &quot;C:\Program Files\Wireshark\Wireshark.exe&quot; -k -i -
+</code></pre>
     </article>
   </div>
 

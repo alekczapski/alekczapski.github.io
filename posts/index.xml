@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>alekczapski</title>
-    <link>https://alekczapski.github.io/</link>
-    <description>Recent content on alekczapski</description>
+    <title>Posts on alekczapski</title>
+    <link>https://alekczapski.github.io/posts/</link>
+    <description>Recent content in Posts on alekczapski</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Feb 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://alekczapski.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://alekczapski.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,18 +19,6 @@
       <guid>https://alekczapski.github.io/wireshark-network-traffic-from-cluster-node/</guid>
       <description>Because tcpdump can write raw packets to standard output (-w - option), and Wireshark can read from standard input (-i - option), we can use ssh or plink.exe and redirect tcpdump output on a remote machine to a local Wireshark. plink.exe is a command-line connection tool similar to UNIX ssh mostly used for automated operations.
 Linux example wireshark -k -i &amp;lt; (ssh _NODE_ sudo tcpdump -nnqt -s 0 -i any -A &amp;quot;portrange 5060-5099 or proto gre&amp;quot; -U -w -) Windows example &amp;quot;C:\Program Files\PuTTY\plink.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://alekczapski.github.io/about/</link>
-      <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://alekczapski.github.io/about/</guid>
-      <description>Notes for later use. 👨‍👩‍👧‍👧 🐈 Mechanical Engineer, Software Tester, IT enthusiast, Open Source fan.
-LinkedIn, GitHub, YouTube
-  powered by Hugo and Minimal Bootstrap Hugo Theme
- </description>
     </item>
     
   </channel>
